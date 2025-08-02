@@ -10,6 +10,7 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
+
   <meta property="og:type" content="website">
 <meta property="og:title" content="God knows...">
 <meta property="og:url" content="http://example.com/archives/2025/index.html">
@@ -26,27 +27,35 @@
   
     <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png">
   
+
+  <!-- ✅ 加载主题样式 -->
   <link rel="stylesheet" type="text/css" href="/./main.a5fda8.css">
+
+  <!-- ✅ VS Code 风格代码高亮：github-dark -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github-dark.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
   <style type="text/css">
     
     #container.show {
       background: linear-gradient(200deg,#a0cfe4,#e8c37e);
     }
   </style>
-  
 
   
 
   
-    
- 	  <script src="/lib/clickLove.js"></script>
+
+  
+    <script src="/lib/clickLove.js"></script>
   
   
 
 
   
-
 </head>
+
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -226,33 +235,14 @@
       	<div class="article-meta">
 	      	
 <a href="/2025/08/02/DSU/" class="archive-article-date">
-        <time datetime="2025-08-02T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-08-02</time>
+        <time datetime="2025-08-02T13:28:24.580Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-08-02</time>
 </a>
 
         </div>
     	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2025/08/02/DSU/" target="_blank">DSU模板</a>
-  
-    </h1>
-  
-
 
         <div class="article-info info-on-right">
           
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
           
 
         </div>
@@ -306,33 +296,31 @@
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2025 <a href="http://example.com/" target="_blank">God knows...</a>
-    	</div>
-      	<div class="footer-right">
-			
-			
-      		GitHub:<a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank">hexo-theme-yilia-plus</a> by Litten
-      	</div>
+      <div class="footer-left">
+        &copy; 2025
+        <a href="http://example.com/" target="_blank">God knows...</a>
+      </div>
+      <div class="footer-right">
+        
+        GitHub:<a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank">hexo-theme-yilia-plus</a> by Litten
+      </div>
     </div>
   </div>
+
+  
+    <script src="/lib/busuanzi.pure.js"></script>
   
   
-	<script src="/lib/busuanzi.pure.js"></script>
-	
-  
-  
-	
-	<span id="busuanzi_container_site_pv" style="display:none">
-		本站总访问量<span id="busuanzi_value_site_pv"></span>次	
-	        <span class="post-meta-divider" >|</span>
-	</span>
-  	<span id="busuanzi_container_site_uv" style='display:none'>
-  		本站访客数<span id="busuanzi_value_site_uv"></span>人
-  	</span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+      本站总访问量<span id="busuanzi_value_site_pv"></span>次
+      <span class="post-meta-divider">|</span>
+    </span>
+    <span id="busuanzi_container_site_uv" style="display:none">
+      本站访客数<span id="busuanzi_value_site_uv"></span>人
+    </span>
   
 
-  <!-- 📋 clipboard.js 支持代码复制 -->
+  <!-- 📋 VSCode 风格代码复制按钮 -->
   <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -343,15 +331,19 @@
         const button = document.createElement('button');
         button.className = 'copy-btn';
         button.innerText = '📋';
-        button.style.position = 'absolute';
-        button.style.top = '10px';
-        button.style.right = '10px';
-        button.style.border = 'none';
-        button.style.background = 'rgba(255,255,255,0.2)';
-        button.style.color = '#fff';
-        button.style.padding = '5px 8px';
-        button.style.cursor = 'pointer';
-        button.style.borderRadius = '4px';
+        Object.assign(button.style, {
+          position: 'absolute',
+          top: '8px',
+          right: '8px',
+          fontSize: '0.8em',
+          border: 'none',
+          background: '#007acc',
+          color: '#fff',
+          padding: '3px 6px',
+          cursor: 'pointer',
+          borderRadius: '4px',
+          zIndex: 10
+        });
 
         wrapper.appendChild(button);
 
@@ -361,12 +353,20 @@
 
         clipboard.on('success', () => {
           button.innerText = '✅';
-          setTimeout(() => button.innerText = '📋', 1500);
+          setTimeout(() => button.innerText = '📋', 1200);
         });
       });
     });
   </script>
 
+  <!-- ✅ highlight.js 代码高亮 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github-dark.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      hljs.highlightAll();
+    });
+  </script>
 </footer>
 
     </div>
@@ -460,10 +460,6 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -515,7 +511,7 @@
           
             <li class="search-li">
               <a href="https://zhousiwei.gitee.io/ibooks/" target="_blank" 
-                class="search-title" title="记录工作和学习过程中的笔记：Java、前端开发、Hexo博客、聚合支付、Linux笔记、ElasticSearch、ELK日志分析">
+                class="search-title" >
                 
                   <img src="https://zhousiwei.gitee.io/ibooks/favicon.ico">
                 
@@ -524,7 +520,7 @@
             </li>
           
             <li class="search-li">
-              <a href="https://github.com/JoeyBling" target="_blank" 
+              <a href="https://github.com/Godknow3" target="_blank" 
                 class="search-title" >
                 
                   <i class="icon-link icon"></i>
@@ -571,9 +567,6 @@
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
         
-          
-  	  		<div class="aboutme-wrap" id="aboutme">主要涉及技术：<br>Java后端开发、聚合支付、<br>公众号开发、开源爱好者、Linux<br><br>联系QQ:2434387555<br><br>很惭愧<br><br>只做了一点微小的工作<br>谢谢大家</div>
-  	  	
     	</section>
     
   </div>
