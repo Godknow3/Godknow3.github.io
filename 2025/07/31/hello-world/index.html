@@ -403,6 +403,20 @@
 </article>
 
 
+<nav id="article-nav">
+  
+    <a href="/2025/08/02/DSU/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          DSU模板
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -464,6 +478,42 @@
   		本站访客数<span id="busuanzi_value_site_uv"></span>人
   	</span>
   
+
+  <!-- 📋 clipboard.js 支持代码复制 -->
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        const wrapper = block.parentNode;
+        wrapper.style.position = 'relative';
+
+        const button = document.createElement('button');
+        button.className = 'copy-btn';
+        button.innerText = '📋';
+        button.style.position = 'absolute';
+        button.style.top = '10px';
+        button.style.right = '10px';
+        button.style.border = 'none';
+        button.style.background = 'rgba(255,255,255,0.2)';
+        button.style.color = '#fff';
+        button.style.padding = '5px 8px';
+        button.style.cursor = 'pointer';
+        button.style.borderRadius = '4px';
+
+        wrapper.appendChild(button);
+
+        const clipboard = new ClipboardJS(button, {
+          target: () => block
+        });
+
+        clipboard.on('success', () => {
+          button.innerText = '✅';
+          setTimeout(() => button.innerText = '📋', 1500);
+        });
+      });
+    });
+  </script>
+
 </footer>
 
     </div>
@@ -557,6 +607,10 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

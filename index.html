@@ -214,6 +214,109 @@
             
 
   
+    <article id="post-DSU" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2025/08/02/DSU/" target="_blank">DSU模板</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2025/08/02/DSU/" class="archive-article-date">
+        <time datetime="2025-08-02T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-08-02</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>这是一个常用的并查集（Disjoint Set Union, DSU）模板，用于合并集合、查询祖先节点等。</p>
+<details>
+<summary>📌 点击展开查看 DSU 模板代码</summary>
+
+<pre><code class="cpp">const int N = 10010;
+int fa[N];
+
+int find(int x) &#123;
+    return x == fa[x] ? x : fa[x] = find(fa[x]);
+&#125;
+
+bool merge(int x, int y) &#123;
+    int fx = find(x), fy = find(y);
+    if (fx == fy) return false;
+    fa[fx] = fy;
+    return true;
+&#125;
+</code></pre>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2025/08/02/DSU/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -335,6 +438,42 @@
   		本站访客数<span id="busuanzi_value_site_uv"></span>人
   	</span>
   
+
+  <!-- 📋 clipboard.js 支持代码复制 -->
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        const wrapper = block.parentNode;
+        wrapper.style.position = 'relative';
+
+        const button = document.createElement('button');
+        button.className = 'copy-btn';
+        button.innerText = '📋';
+        button.style.position = 'absolute';
+        button.style.top = '10px';
+        button.style.right = '10px';
+        button.style.border = 'none';
+        button.style.background = 'rgba(255,255,255,0.2)';
+        button.style.color = '#fff';
+        button.style.padding = '5px 8px';
+        button.style.cursor = 'pointer';
+        button.style.borderRadius = '4px';
+
+        wrapper.appendChild(button);
+
+        const clipboard = new ClipboardJS(button, {
+          target: () => block
+        });
+
+        clipboard.on('success', () => {
+          button.innerText = '✅';
+          setTimeout(() => button.innerText = '📋', 1500);
+        });
+      });
+    });
+  </script>
+
 </footer>
 
     </div>
@@ -428,6 +567,10 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
