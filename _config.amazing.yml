@@ -4,6 +4,25 @@
 # To enable comments later, replace the theme's sample Gitalk values with
 # credentials from your own GitHub OAuth application.
 
+# Override the theme's built-in branding (the theme ships the original
+# author's logo/favicon/Open Graph values pointing at removeif's CDN).
+logo:
+    text: '-[CH2-CH2]-n'
+
+head:
+    favicon: /img/avatar.png
+    open_graph:
+        title:
+        type: blog
+        url:
+        image:
+        site_name:
+        author:
+        description:
+        twitter_card:
+        twitter_id:
+        twitter_site:
+
 # Keep the navigation limited to pages that exist in this blog by default.
 navbar:
   menu:
@@ -33,27 +52,18 @@ widgets:
         # Author's current location
         location: China
         # URL or path to the avatar image
-        avatar: avatar: /img/avatar.png
+        avatar: /img/avatar.png
         # Whether show the rounded avatar image
         avatar_rounded: true
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: 'https://github.com/ppoffice'
+        follow_link: 'https://github.com/Godknow3'
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
                 url: 'https://github.com/Godknow3'
-            Weibo:
-                icon: fab fa-weibo
-                url: 'https://weibo.com/removeif'
-            Email:
-                icon: fa fa-envelope
-                url: 'mailto:removeif@163.com'
-            Next:
-                icon: fab fa-dribbble
-                url: 'https://removeif.github.io/remove.io'
             RSS:
                 icon: fas fa-rss
                 url: /atom.xml
