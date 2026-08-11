@@ -10,7 +10,7 @@ logo:
     text: '-[CH2-CH2]-n'
 
 head:
-    favicon: /img/avatar.png
+    favicon: source/img/avatar.png
     open_graph:
         title:
         type: blog
