@@ -28,6 +28,7 @@ navbar:
     Home: /
     Archives: /archives
     Tags: /tags
+    About: /about/
 
 
 widgets:
